@@ -202,6 +202,8 @@
 		DA7025C428C23A5800CAC91E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DAA59B0E28CB0AFD00E7A297 /* CustomCenteredLayout.swift */,
+				DA42385E28C4DB7F007BAA99 /* SectionHeaderReusableView.swift */,
 				DA234E6E28C9BB6D00CE5924 /* Cells */,
 			);
 			path = Views;
@@ -295,8 +297,6 @@
 				DA7025BA28C2002D00CAC91E /* Networking */,
 				DA7025BD28C200F100CAC91E /* Models */,
 				DA7025C428C23A5800CAC91E /* Views */,
-				DAA59B0E28CB0AFD00E7A297 /* CustomCenteredLayout.swift */,
-				DA42385E28C4DB7F007BAA99 /* SectionHeaderReusableView.swift */,
 				DA3BA39F28C495DB005AE585 /* Controllers */,
 				DA65411C28C5E2B3006C173F /* Storyboards */,
 				DAA3B7CB28C35A9900500CB1 /* Supporting Files */,
