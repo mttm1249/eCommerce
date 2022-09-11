@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="MarkPro-Medium.ttf">
+            <string>MarkPro-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="categoryCell" id="6eL-vf-SKC" customClass="CategoryCell" customModule="eCommerce" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="71" height="93"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="VXj-GV-dyV">
+                <rect key="frame" x="0.0" y="0.0" width="71" height="93"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2a-sG-qAK">
+                        <rect key="frame" x="0.0" y="0.0" width="71" height="71"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5yC-5e-WIZ">
+                                <rect key="frame" x="16" y="16" width="38" height="38"/>
+                                <color key="tintColor" red="0.7019608021" green="0.7019608021" blue="0.75686275960000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="38" id="ISc-0i-Ljj"/>
+                                    <constraint firstAttribute="height" constant="38" id="O7i-tK-u6d"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="5yC-5e-WIZ" firstAttribute="top" secondItem="v2a-sG-qAK" secondAttribute="top" constant="16" id="4n4-J4-ehb"/>
+                            <constraint firstItem="5yC-5e-WIZ" firstAttribute="leading" secondItem="v2a-sG-qAK" secondAttribute="leading" constant="16" id="M8w-2i-cgc"/>
+                            <constraint firstAttribute="bottom" secondItem="5yC-5e-WIZ" secondAttribute="bottom" constant="17" id="g5i-yC-ZXb"/>
+                            <constraint firstAttribute="trailing" secondItem="5yC-5e-WIZ" secondAttribute="trailing" constant="17" id="xGS-JW-VcT"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <real key="value" value="35.5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CQr-W2-OaM">
+                        <rect key="frame" x="0.0" y="78" width="71" height="15"/>
+                        <fontDescription key="fontDescription" name="MarkPro-Medium" family="Mark Pro" pointSize="12"/>
+                        <color key="textColor" red="0.0039215686269999999" green="0.0" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="CQr-W2-OaM" secondAttribute="trailing" id="0xF-Cu-ICZ"/>
+                    <constraint firstAttribute="bottom" secondItem="CQr-W2-OaM" secondAttribute="bottom" id="7kj-DP-2PW"/>
+                    <constraint firstItem="CQr-W2-OaM" firstAttribute="top" secondItem="v2a-sG-qAK" secondAttribute="bottom" constant="7" id="IVK-ZT-0lv"/>
+                    <constraint firstItem="v2a-sG-qAK" firstAttribute="leading" secondItem="VXj-GV-dyV" secondAttribute="leading" id="c0s-tx-YOR"/>
+                    <constraint firstItem="v2a-sG-qAK" firstAttribute="top" secondItem="VXj-GV-dyV" secondAttribute="top" id="fOk-75-oPp"/>
+                    <constraint firstAttribute="trailing" secondItem="v2a-sG-qAK" secondAttribute="trailing" id="gzI-QY-yAP"/>
+                    <constraint firstItem="CQr-W2-OaM" firstAttribute="leading" secondItem="VXj-GV-dyV" secondAttribute="leading" id="jNl-ir-F0Y"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="83" height="135"/>
+            <connections>
+                <outlet property="categoryCircle" destination="v2a-sG-qAK" id="cNm-hZ-rbt"/>
+                <outlet property="categoryImage" destination="5yC-5e-WIZ" id="Nvb-bo-s3W"/>
+                <outlet property="categoryName" destination="CQr-W2-OaM" id="1Ze-nN-fDh"/>
+            </connections>
+            <point key="canvasLocation" x="157.24637681159422" y="83.370535714285708"/>
+        </collectionViewCell>
+    </objects>
+</document>

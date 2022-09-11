@@ -1,0 +1,20 @@
+PODS:
+  - Cosmos (23.0.0)
+  - DoubleSlider (1.0.0)
+
+DEPENDENCIES:
+  - Cosmos
+  - DoubleSlider
+
+SPEC REPOS:
+  trunk:
+    - Cosmos
+    - DoubleSlider
+
+SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
+  DoubleSlider: ed3f4ea442dba6fd9df07cab15c25e21875deb81
+
+PODFILE CHECKSUM: 4f1d3582ccdd4e6ec0217c41148e93a18c70957e
+
+COCOAPODS: 1.11.2

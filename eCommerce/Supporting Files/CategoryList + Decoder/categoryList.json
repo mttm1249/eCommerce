@@ -1,0 +1,27 @@
+[
+    {
+        "categoryName": "Phones",
+        "categoryImage": "Phones",
+        "id": 1
+    },
+    {
+        "categoryName": "Computer",
+        "categoryImage": "Computer",
+        "id": 2
+    },
+    {
+        "categoryName": "Health",
+        "categoryImage": "Health",
+        "id": 3
+    },
+    {
+        "categoryName": "Books",
+        "categoryImage": "Books",
+        "id": 4
+    },
+    {
+        "categoryName": "Another",
+        "categoryImage": "Books",
+        "id": 5
+    }
+]
