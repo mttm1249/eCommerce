@@ -8,7 +8,7 @@
 import UIKit
 
 class MainViewController: UIViewController, FilterDelegateProtocol {
-
+    
     var searchController = UISearchController(searchResultsController: nil)
     var selectedCategoryIndex: IndexPath?
     let categoryList = Bundle.main.decode([CategoryListModel].self, from: "categoryList.json")
@@ -134,13 +134,16 @@ class MainViewController: UIViewController, FilterDelegateProtocol {
         }
     }
     
+    // Filtering by brands
     func filterByBrand(_ brand: String) {
         filteredBestSeller = filteredPhones(for: brand)
         applySnapshot(animated: true, visibleArray: filteredBestSeller)
     }
     
+    // Filtering by price range
     func filterByPrice(_ from: Int, _ to: Int) {
-        print("from: \(from), to: \(to)")
+        filteredBestSeller = bestSeller.filter{(from...to).contains($0.priceWithoutDiscount!)}
+        applySnapshot(animated: true, visibleArray: filteredBestSeller)
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
