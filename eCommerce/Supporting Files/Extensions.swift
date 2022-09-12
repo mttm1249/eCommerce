@@ -257,15 +257,6 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         snapshot.appendItems(visibleArray, toSection: .best)
         dataSource.apply(snapshot, animatingDifferences: animated)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetails" {
-            let detailsVC = segue.destination as! DetailsViewController
-            if let fakeChose = bestSeller.first(where: { $0.productId == 3333 }) {
-                detailsVC.fakeChosenPhone = fakeChose
-            }
-        }
-    }
 }
 
 // MARK: Search
@@ -276,7 +267,6 @@ extension MainViewController: UISearchBarDelegate, UISearchResultsUpdating {
             iconView.image = iconView.image?.withRenderingMode(.alwaysTemplate)
             iconView.tintColor = .orangeColor
         }
-        
         let font = UIFont(name: "MarkPro", size: 12)!
         searchController.searchBar.searchTextField.attributedPlaceholder = NSAttributedString.init(string: " Search", attributes: [.font: font, .foregroundColor: UIColor.searchBarText])
         
@@ -284,13 +274,10 @@ extension MainViewController: UISearchBarDelegate, UISearchResultsUpdating {
         searchController.searchBar.delegate = self
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.searchTextField.backgroundColor = .none
+        searchController.searchBar.searchTextField.backgroundColor = .white
         searchController.searchBar.searchBarStyle = .minimal
         searchController.searchBar.layoutMargins = .init(top: 0, left: 0, bottom: 20, right: 85)
         searchController.searchBar.tintColor = .darkBlue
-        
-        searchController.searchBar.searchTextField.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-
         definesPresentationContext = true
     }
     

@@ -5,11 +5,16 @@
 //  Created by Денис on 03.09.2022.
 //
 
+protocol FilterDelegateProtocol: AnyObject {
+    func filterByBrand(_ brand: String)
+    func filterByPrice(_ from: Int,_ to: Int)
+}
 
 import UIKit
 
 class FilterViewController: UIViewController, UISheetPresentationControllerDelegate, UIPopoverPresentationControllerDelegate {
     
+    weak var delegate: FilterDelegateProtocol?
     @IBOutlet var filterButtons: [UIButton]!
     @IBOutlet weak var brandButton: UIButton!
     @IBOutlet weak var priceButton: UIButton!
@@ -96,14 +101,15 @@ class FilterViewController: UIViewController, UISheetPresentationControllerDeleg
 extension FilterViewController: BrandsDelegate {
     func brandName(_ title: String) {
         brandButton.setTitle(title, for: .normal)
+        delegate?.filterByBrand(title)
         doneButton.isEnabled = true
     }
 }
 
 extension FilterViewController: PriceDelegate {
     func chosedPriceRange(_ from: Int, _ to: Int) {
-        print("from: \(from), to: \(to)")
         priceButton.setTitle("$\(from) - $\(to)", for: .normal)
+        delegate?.filterByPrice(from, to)
         doneButton.isEnabled = true
     }
 }

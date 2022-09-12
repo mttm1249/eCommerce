@@ -7,8 +7,8 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
-    
+class MainViewController: UIViewController, FilterDelegateProtocol {
+
     var searchController = UISearchController(searchResultsController: nil)
     var selectedCategoryIndex: IndexPath?
     let categoryList = Bundle.main.decode([CategoryListModel].self, from: "categoryList.json")
@@ -117,6 +117,30 @@ class MainViewController: UIViewController {
         } else {
             favoritesBadge.removeFromSuperview()
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let detailsVC = segue.destination as! DetailsViewController
+            if let fakeChose = bestSeller.first(where: { $0.productId == 3333 }) {
+                detailsVC.fakeChosenPhone = fakeChose
+            }
+        }
+        if segue.identifier == "filter" {
+            filteredBestSeller.removeAll()
+            applySnapshot(animated: false, visibleArray: bestSeller)
+            let detailsVC = segue.destination as! FilterViewController
+            detailsVC.delegate = self
+        }
+    }
+    
+    func filterByBrand(_ brand: String) {
+        filteredBestSeller = filteredPhones(for: brand)
+        applySnapshot(animated: true, visibleArray: filteredBestSeller)
+    }
+    
+    func filterByPrice(_ from: Int, _ to: Int) {
+        print("from: \(from), to: \(to)")
     }
     
     @IBAction func unwindSegue(_ segue: UIStoryboardSegue) {
