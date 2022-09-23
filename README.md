@@ -4,8 +4,7 @@
 <img src="https://user-images.githubusercontent.com/87662841/189529320-125cdd94-e0d2-45f0-b057-0ca7bf4a2b85.png" width="230" height="500"> 
 
 ### Поиск устройств
-<img src="https://user-images.githubusercontent.com/87662841/189529373-58b1471e-4cfb-41fd-b08b-c8e3f4d71119.png" width="230" height="500"> <img src="https://user-images.githubusercontent.com/87662841/189529558-c21369ce-fbfb-4fc4-a4c5-496406e15ba5.png" width="230" height="500"> <img src="https://user-images.githubusercontent.com/87662841/189529621-0a04c306-9f03-44a7-99dd-7d8ee3899fbf.gif" width="230" height="500">
-
+<img src="https://user-images.githubusercontent.com/87662841/189529373-58b1471e-4cfb-41fd-b08b-c8e3f4d71119.png" width="230" height="500"> <img src="https://user-images.githubusercontent.com/87662841/191933656-e1fd9944-3bdf-4ac5-be1b-25cbf3c6c740.png" width="230" height="500"> <img src="https://user-images.githubusercontent.com/87662841/191934545-81c46fea-8582-42d8-a755-8afe584130cc.gif" width="230" height="500">
 
 ### Добавление устройств в избранное
 <img src="https://user-images.githubusercontent.com/87662841/189529456-b98bee96-8039-4de5-bffc-b1656cec7ba5.png" width="230" height="500"> <img src="https://user-images.githubusercontent.com/87662841/189529460-66185b68-a820-4ac8-88e2-98e6b130dacf.png" width="230" height="500"> 
