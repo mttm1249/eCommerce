@@ -25,12 +25,8 @@ class PriceSheet: UIViewController, UISheetPresentationControllerDelegate, UIVie
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        sheetPresentationController.prefersGrabberVisible = true
-        sheetPresentationController.delegate = self
-        sheetPresentationController.selectedDetentIdentifier = .medium
-        sheetPresentationController.detents = [.medium()]
-        
-        makeLabels()
+        setupCustomBottomSheet()
+        setupLabels()
         setupDoubleSlider()
         doubleSlider.labelDelegate = self
         doubleSlider.numberOfSteps = labels.count
@@ -38,7 +34,22 @@ class PriceSheet: UIViewController, UISheetPresentationControllerDelegate, UIVie
         doubleSlider.smoothStepping = true
     }
     
-    private func makeLabels() {
+    private func setupCustomBottomSheet() {
+        sheetPresentationController.prefersGrabberVisible = true
+        sheetPresentationController.delegate = self
+        if #available(iOS 16.0, *) {
+            let smallId = UISheetPresentationController.Detent.Identifier("small")
+            let smallDetent = UISheetPresentationController.Detent.custom(identifier: smallId) { context in
+                return 100
+            }
+            sheetPresentationController.detents = [smallDetent]
+        } else {
+            sheetPresentationController.selectedDetentIdentifier = .medium
+             sheetPresentationController.detents = [.medium()]
+        }
+    }
+    
+    private func setupLabels() {
         for num in stride(from: 0, to: 10000, by: 1) {
             labels.append("$\(num)")
         }
